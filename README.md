@@ -2,7 +2,11 @@ Address-Lookup-and-Normalizer
 =============================
 
 Given input, works with Google Maps API and returns back a JSON formatted response as to whether the address is valid, and gives it's full address.
+<pre>
 eg: {"status": "OK", "address": ["600 Broadway #400, Kansas City, MO 64105, USA"]}
+</pre>
+
+Also runs a web-service utilizing Flask. Information can be requested using the RESTful API via GET & POST.
 
 <h3>Examples:</h3>
 
