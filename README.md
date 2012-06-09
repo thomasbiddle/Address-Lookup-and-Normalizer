@@ -10,7 +10,7 @@ normFlask.py must be run in order to access the web-service
 
 REST Interface - Accepted request methods: GET, POST
 <pre>
-root@Python:~/PythonScripts/AddressNorm# curl localhost:5000 -X POST -d 'input="1955 Landings Drive CA"'
+root@Python:~/# curl localhost:5000 -X POST -d 'input="1955 Landings Drive CA"'
 {"status": "OK", "address": ["1955 Landings Dr, Mountain View, CA 94043, USA"]}
 </pre>
 
@@ -20,7 +20,7 @@ http://localhost:5000/?input=%221955%20landings%20drive%22
 
 When running normCLI.py directly, it will read from addresses.txt located in the same directly and will treat each line as input. Format for address.txt is a Python list ( eg: ['1955 Landings Drive', 'California', ''] )
 <pre>
-root@Python:~/PythonScripts/AddressNorm# python normCLI.py
+root@Python:~/# python normCLI.py
 {"status": "OK", "address": ["600 Broadway #400, Kansas City, MO 64105, USA"]}
 {"status": "INCOMPLETE", "address": ["Los Angeles, CA 90001, USA"]}
 {"status": "OK", "address": ["1900 South Blvd #304, Charlotte, NC 28203, USA"]}
