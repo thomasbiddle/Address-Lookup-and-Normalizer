@@ -1,19 +1,24 @@
 Address-Lookup-and-Normalizer
 =============================
 
-Given input, works with Google Maps API to return back whether the address is valid or not.
+Given input, works with Google Maps API and returns back a JSON formatted response as to whether the address is valid, and gives it's full address.
+eg: {"status": "OK", "address": ["600 Broadway #400, Kansas City, MO 64105, USA"]}
 
 <h3>Examples:</h3>
-<br><br>
+
+normFlask.py must be run in order to access the web-service
+
+REST Interface - Accepted request methods: GET, POST
 <pre>
 root@Python:~/PythonScripts/AddressNorm# curl localhost:5000 -X POST -d 'input="1955 Landings Drive CA"'
 {"status": "OK", "address": ["1955 Landings Dr, Mountain View, CA 94043, USA"]}
 </pre>
-<br><br>
+
 <pre>
 http://localhost:5000/?input=%221955%20landings%20drive%22
 </pre>
-<br><br>
+
+When running normCLI.py directly, it will read from addresses.txt located in the same directly and will treat each line as input. Format for address.txt is a Python list ( eg: ['1955 Landings Drive', 'California', ''] )
 <pre>
 root@Python:~/PythonScripts/AddressNorm# python normCLI.py
 {"status": "OK", "address": ["600 Broadway #400, Kansas City, MO 64105, USA"]}
@@ -26,7 +31,8 @@ root@Python:~/PythonScripts/AddressNorm# python normCLI.py
 {"status": "OK", "address": ["1647 8th Ave, Brooklyn, NY 11215, USA"]}
 ....
 </pre>
-<br><br>
+
+You can also call the checkAdd() function directly, passing it an address as a string.
 <pre>
 Python 2.7.3 (default, May  9 2012, 23:42:16)
 [GCC 4.4.3] on linux2
