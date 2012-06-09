@@ -6,8 +6,7 @@ Given input, works with Google Maps API to return back whether the address is va
 <h3>Examples:</h3>
 <br><br>
 <pre>
-root@Python:~/PythonScripts/AddressNorm# curl localhost:5000 -X POST
--d 'input="1955 Landings Drive CA"'
+root@Python:~/PythonScripts/AddressNorm# curl localhost:5000 -X POST -d 'input="1955 Landings Drive CA"'
 {"status": "OK", "address": ["1955 Landings Dr, Mountain View, CA 94043, USA"]}
 </pre>
 <br><br>
